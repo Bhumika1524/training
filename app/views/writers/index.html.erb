@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+<h1>Writers</h1>
+<div id='writers'>
+  <%= select_tag 'writer_id', options_from_collection_for_select(@writers, 'id', 'name') %>
+</div>
+<br/>
+<br/>
+<button id="new_writer_btn">New Writer</button>
+<br/>
+<br/>
+
+<div id="target"></div>
+
+<script>
+  $(document).ready(function (){
+      $("#new_writer_btn").on("click", function (){
+          $.ajax({
+              url: "/writers/new",
+              type: "get",
+              success: function(data){
+              },
+              error: function(data){
+              }
+          })
+      });
+      $(".new_writer .submit_button").on("click", function (e){
+          let data = $(".new_writer").serializeArray()
+          $.ajax({
+              url: "/writers",
+              type: "POST",
+              data: data,
+              success: function(data){
+              },
+              error: function(data){
+              }
+          })
+      });
+      $("#writer_id").on("click", function (){
+          let id = $("#writer_id").val();
+          $.ajax({
+              url: "/writers/" + id,
+              type: "get",
+              success: function(data){
+              },
+              error: function(data){
+              }
+          })
+      });
+      $(document).on("click",".edit_writer_btn", function (e){
+          let id = $(this).attr("value");
+          $.ajax({
+              url: "/writers/" + id +"/edit",
+              type: "get",
+              success: function(data){
+              },
+              error: function(data){
+              }
+          })
+      });
+      $(document).on("click",".edit_writer .submit_button", function (e){
+          e.preventDefault();
+          let id = $("form").attr("action");
+          let data = $(".edit_writer").serializeArray();
+          $.ajax({
+              url: id,
+              type: "patch",
+              data: data,
+              success: function(data){
+              },
+              error: function(data){
+              }
+          })
+      });
+      $(document).on("click",".delete_writer", function (e){
+          e.preventDefault();
+          let id = $(this).attr("value");
+          $.ajax({
+              url: "/writers/" + id,
+              type: "delete",
+              success: function(data){
+              },
+              error: function(data){
+              }
+          })
+      });
+  });
+</script>

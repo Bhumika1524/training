@@ -1,0 +1,5 @@
+$("#target").html("");
+$("#writer_id").empty();
+<% @writers.each do |writer| %>
+$('#writer_id').append($('<option value="<%= writer.id %>"><%= writer.name %></option>'));
+<% end %>
