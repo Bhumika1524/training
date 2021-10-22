@@ -1,0 +1,182 @@
+*{
+	font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1{
+	font-size: 40px;
+	color: white;
+}
+
+body{
+	background: rgba(98, 95, 241, 0.635);
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.tab {
+  display: block;
+}
+.step {
+	text-decoration: none;
+	background-color:  #333333;
+	color: white;
+	line-height: 25px;
+	text-align: center;
+  height: 25px;
+  width: 25px;
+  margin: 0 2px;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step:hover {
+  opacity: 1;
+}
+
+.step.finish {
+  background-color: #04AA6D;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn, #prev1, #prev3 {
+  background-color: #bbbbbb;
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+#form1 {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+.container{
+	background: rgba(21, 20, 85, 0.7);
+	padding: 2.3rem 0.5rem;
+	border-radius: 0.3rem;
+	width: 100%;
+	margin: 3.2rem auto 0 auto;
+}
+
+input[type=submit]{
+	width: 46%;
+	padding: 0.8rem;
+	background: rgb(7, 173, 7);
+	color: white;
+	border-radius: 0.2rem;
+	cursor: pointer;
+	border:none ;
+}
+
+@media (min-width: 376px){
+	.container{
+		max-width: 320px;
+	}
+}
+
+@media (min-width: 576px){
+	.container{
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px){
+	.container{
+		max-width: 720px;
+	}
+}
+#radio-btn,
+#check-box {
+	margin-right: 0.5rem;
+ 	min-height: 1.2rem;
+ 	min-width: 1.2rem;
+}
+.input-size{
+	padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+
+}
+
+label{
+	display: flex;
+	align-items: center;
+	font-size: 1.125rem;
+	margin-bottom: 0.5rem;
+}
+.col-75 textarea{
+	width: 45%;
+	min-height: 6rem;
+	resize: vertical;
+	padding: 0.5rem 0 0 0.5rem;
+}
+input.marquee-scroll{
+	overflow-y: visible;
+}
+input.marquee {
+  padding: 0;
+  resize: none;
+  min-height: 1.5rem;
+}
+
+
+#table{
+	border: 2px solid white;
+	border-radius: 5px;
+	color: white;
+	background-color: saddlebrown;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin:2rem auto;
+	width: 100%;
+}
+
+
+span{
+	color: red;
+	width: 100%;
+}
+.class{
+	grid-area: class;
+}
+.percentage{
+	grid-area: percent;
+}
+.year{
+	grid-area: year;
+}
+.grid{
+	display: grid;
+	grid-template-areas:
+	'class percent year';
+}
+.step.active{
+	opacity: 0.2;
+}

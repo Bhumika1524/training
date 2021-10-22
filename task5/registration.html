@@ -1,0 +1,187 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<marquee>
+				<h1>Registration Form</h1>
+			</marquee>
+		</div>
+		<form name="form1"  onsubmit="ValidateForm();return false">
+			<div class="col-25">
+				<label>Name:</label>
+			</div>
+			<div>
+				<input id="name" name="name" type="text" class="input-size" placeholder="Enter your Name">
+				<span id="name-error"></span>
+			</div>
+		</br>
+			<div class="col-25">
+				<label>Contact Number:</label>
+			</div>
+			<div class="col-75">
+				<input type="text" name="contact" class="input-size" id="number" placeholder="Enter your Contact Number">
+				<span id="contact-error"></span>
+			</div>
+			</br>
+			<div class="col-25">
+				<label>Email:</label>
+			</div>
+			<div class="col-75">
+				<input id="email" type="text" class="input-size" name="email" placeholder="Enter your Email">
+				<span id="email-error"></span>
+			</div>
+			</br>
+			<div class="col-25">
+				<label>City:</label>
+			</div>
+			<div class="col-75">
+				<select name="city" id="city">
+					<option value="">Select your City</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Mohali">Mohali</option>
+					<option value="ZirakPur">Zirakpur</option>
+				</select>
+				<span id="city-error"></span>
+			</div>
+			</br>
+			<div id="hobby" class="col-25">
+				<label>Hobby:</label>
+			</div>
+			<div class="col-75">
+				<label>
+					<input class="hobby" name="dancing" value="Dancing" id="check-box" type="checkbox" >Dancing</label>
+				<label>
+					<input class="hobby" name="singing" value="Singing" id="check-box2" type="checkbox">Singing
+				</label>
+				<label>
+					<input class="hobby" name="playing" value="Playing" id="check-box3" type="checkbox">Playing
+				</label>
+				<span id="hobby-error"></span>
+			</div>
+			</br>
+			<div class="col-25">
+				<label>Date of Birth:</label>
+			</div>
+			<div class="col-75">
+				<input type="date" name="DOB" id="Dob">
+				<span id="dob-error"></span>
+			</div>
+			</br>
+			<div class="col-25">
+				<label>Gender:</label>
+			</div>
+			<div class="col-75"><label>
+				<input id="radio-btn" class="gender" value="Male" name="gender" type="radio">Male</label>
+				<label>
+				<input id="radio-btn" value="Female" class="gender" name="gender" type="radio">Female</label>
+				<span id="gendererror"></span>
+			</div>
+			</br>
+			<div class="col-25">
+				<label>Address:</label>
+			</div>
+			<div class="col-75">
+				<textarea id="address" name="Address" placeholder="Enter your address"></textarea>
+				<span id="address-error"></span>
+			</div>
+			</br>
+
+         	<label id="education">Educational Qualification: </label>
+         </br>
+         	<div class="grid">
+         	<div class="class">
+         	<label>Class </label>
+         	 </br>
+	         <select name="class1" id="class1">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="10"> 10<sup>th</sup></option>
+		         <option class="disable" value ="12"> 12<sup>th</sup></option>
+		         <option class="disable" value ="graduation">Graduation</option>
+		         </select> </br>
+	         <select name="class2" id="class2">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="10"> 10<sup>th</sup></option>
+		         <option class="disable" value ="12"> 12<sup>th</sup></option>
+		         <option class="disable" value ="graduation">Graduation</option>
+	         </select> </br>
+	         <select name="class3" id="class3">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="10"> 10<sup>th</sup></option>
+		         <option class="disable" value ="12"> 12<sup>th</sup></option>
+		         <option class="disable" value ="graduation">Graduation</option>
+	         </select>
+	         </div>
+	         <div class="percentage">
+	         <label>Percentage</label>
+	     	 </br>
+	         <select name="percentage1" id="percent1">
+	         	<option value="">Select</option>
+	         	<option value="above-90">Above 90%</option>
+	         	<option value="above-80">Above 80%</option>
+	         	<option value="above-70">Above 70%</option>
+	         	<option value="above-60">Above 60%</option>
+	         </select>
+	         </br>
+	         <select name="percentage2" id="percent2">
+	         	<option value="">Select</option>
+	         	<option value="above-90">Above 90%</option>
+	         	<option value="above-80">Above 80%</option>
+	         	<option value="above-70">Above 70%</option>
+	         	<option value="above-60">Above 60%</option>
+	         </select>
+	         <br/>
+	         <select name="percentage3" id="percent3">
+	         	<option value="">Select</option>
+	         	<option value="above-90">Above 90%</option>
+	         	<option value="above-80">Above 80%</option>
+	         	<option value="above-70">Above 70%</option>
+	         	<option value="above-60">Above 60%</option>
+	         </select>
+	         </div>
+	     </br>
+	         <div class="year">
+	         <label> Year </label>
+	     </br>
+	         <select name="year1" id="yr1">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="2015">2015</option>
+		         <option class="disable" value ="2017">2017</option>
+		         <option class="disable" value ="2020">2020</option>
+	         </select>
+	         </br>
+	         <select name="year2" id="yr2">
+	             <option class="disable" value="">Select</option>
+		         <option class="disable" value ="2015">2015</option>
+		         <option class="disable" value ="2017">2017</option>
+		         <option class="disable" value ="2020">2020</option>
+	         </select>
+	         </br>
+	         <select name="year3" id="yr3">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="2015">2015</option>
+		         <option class="disable" value ="2017">2017</option>
+		         <option class="disable" value ="2020">2020</option>
+	         </select>
+	         </div>
+
+	         <span id="edu-error"></span>
+	         </div>
+	         </br>
+	         <div id="submit-button" class="col-25">
+				<input type="submit" name="Submit">
+			</div>
+		</form>
+	</div>
+	<br/>
+	<div id="table">
+		
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="registration.js"></script>
+</html>

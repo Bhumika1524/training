@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<marquee>
+				<h1>Registration Form</h1>
+			</marquee>
+		</div>
+		<form>
+			<div class="col-25">
+				<label>Name:</label>
+			</div>
+			<div>
+				<input type="text" class="input-size" placeholder="Enter your Name" required>
+			</div>
+			<div id="contact-number" class="col-25">
+				<label>Contact Number:</label>
+			</div>
+			<div class="col-75">
+				<input type="number" class="input-size" name="number" placeholder="Enter your Contact Number" pattern="[\d]{10}" required>
+			</div>
+			<div id="email" class="col-25">
+				<label>Email:</label>
+			</div>
+			<div class="col-75">
+				<input type="email" class="input-size" name="email" placeholder="Enter your Email" required>
+			</div>
+			<div id="city" class="col-25">
+				<label>City:</label>
+			</div>
+			<div class="col-75">
+				<select>
+					<option>Select your City</option>
+					<option>Chandigarh</option>
+					<option>Mohali</option>
+					<option>Zirakpur</option>
+				</select>
+			</div>
+			<div id="hobby" class="col-25">
+				<label>Hobby:</label>
+			</div>
+			<div class="col-75">
+				<label>
+					<input id="check-box" type="checkbox" name="dancing">Dancing</label>
+				<label>
+					<input id="check-box" type="checkbox" name="singing">Singing
+				</label>
+				<label>
+					<input id="check-box" type="checkbox" name="playing">Playing
+				</label>
+			</div>
+			<div id="dob" class="col-25">
+				<label>Date of Birth:</label>
+			</div>
+			<div class="col-75">
+				<input type="date" name="Dob">
+			</div>
+			<div id="gender" class="col-25">
+				<label>Gender:</label>
+			</div>
+			<div class="col-75"><label>
+				<input id="radio-btn" type="radio" name="gender">Male</label>
+				<label>
+				<input id="radio-btn" type="radio" name="gender">Female</label>
+			</div>
+			<div id="address" class="col-25">
+				<label>Address:</label>
+			</div>
+			<div class="col-75">
+				<textarea placeholder="Enter your address" required></textarea>
+			</div>
+			<div id="submit-button" class="col-25">
+				<input type="submit" name="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container bg-success opacity-75 text-white">
+		<h1 class="text-center text-white">Registration Form</h1>
+		<form class="form-row row align-items-center justify-content-center" id="form1" name="form1">
+			<div class="col-11 col-sm-9 col-md-7 col-lg-6 p-0 mt-3 mb">
+			<div class="row">
+				<a class="w-20 h-10 text-dark bg-light rounded-circle mx-auto" onclick="step1()" type="button" title="1"><pre> 1 </pre></a>
+		        <a class="w-20 h-10 text-dark bg-light rounded-circle border-0 mx-auto"  onclick="step2()" type="button" title="2"><pre> 2 </pre></a>
+		        <a class="w-20 h-10 text-dark bg-light rounded-circle border-0 mx-auto" onclick="step3()" type="button" title="3"><pre> 3 </pre></a>
+		        <a class="w-20 h-10 text-dark bg-light rounded-circle border-0 mx-auto" onclick="step4()" type="button" title="4"><pre> 4 </pre></a>
+  			</div>
+  			<br/>
+			<div class="form-group col mx-auto" id="tab1">
+				<label class="control-label col-sm-2">Name:</label>
+				<div class="col-sm-10">
+					<input id="name" name="Name" type="text" class="form-control" placeholder="Enter your Name">
+					<span class="text-danger" id="name-error"></span>
+				</div>
+			<br/>
+			<br/>
+				<label class="control-label col-sm-4">Contact Number:</label>
+				<div class="col-sm-10">
+					<input type="text" name="Contact" class="form-control" id="number" placeholder="Enter your Contact Number">
+					<span class="text-danger" id="contact-error"></span>
+				</div>
+			<br/>
+			<br/>
+				<label class="control-label col-sm-2">Email:</label>
+				<div class="col-sm-10">
+					<input id="email" type="text" class="form-control" name="Email" placeholder="Enter your Email">
+					<span class="text-danger" id="email-error"></span>
+				</div>
+				<br/>
+				<br/>
+				<div class="overflow-auto">
+			    <div class="float-right">
+			    	<button class="btn btn-default btn-primary" type="button" onclick="current_next()">Next</button>
+			    </div>
+				</div>
+			</div>
+			<br/>
+			<br/>
+			<div class="form-group col" id="tab2">
+				<label class="control-label col-sm-2">City:</label>
+				<div class="col-sm-10">
+					<select class="form-control" name="City" id="city">
+						<option class="form-control" value="">Select your City</option>
+						<option value="Chandigarh">Chandigarh</option>
+						<option value="Mohali">Mohali</option>
+						<option value="ZirakPur">Zirakpur</option>
+					</select>
+					<span id="city-error"></span>
+				</div>
+				<br/>
+				<br/>
+				<div class="form-group">
+					<label class="control-label col-sm-2">Hobby:</label>
+					<label class="checkbox-inline">
+						<input class="hobby" name="Hobby" value="Dancing" id="check-box" type="checkbox" > Dancing
+					</label>
+					<label class="checkbox-inline">
+						<input class="hobby" name="Hobby" value="Singing" id="check-box2" type="checkbox"> Singing
+					</label>
+					<label class="checkbox-inline">
+						<input class="hobby" name="Hobby" value="Playing" id="check-box3" type="checkbox"> Playing
+					</label>
+					<span class="text-danger" id="hobby-error"></span>
+				</div>
+				</br>
+				<br/>
+				<label class="control-label col-sm-4">Date of Birth:</label>
+				<div class="col-sm-10">
+					<input class="form-control " type="date" name="DOB" id="Dob">
+					<span class="text-danger" id="dob-error"></span>
+				</div>
+				<br/>
+				<br/>
+				<div class="overflow-auto">
+			    	<button class="btn btn-default btn-secondary" type="button" onclick="Prev()">Previous</button>
+			    	<div class="float-right">
+			    		<button class="btn btn-default btn-primary" type="button" onclick="current_next()">Next</button>
+			    	</div>
+				</div>
+			</div>
+			</br>
+			<div class="form-group col" id="tab3">
+				<label class="control-label col-sm-2">Gender:</label>
+				<div class="col-sm-10">
+					<label class="radio-inline">
+					<input id="radio-btn" class="gender" value="Male" name="gender" type="radio"> Male</label>
+					<label class="radio-inline">
+					<input id="radio-btn" value="Female" class="gender" name="gender" type="radio"> Female</label>
+					<span class="text-danger" id="gendererror"></span>
+				</div>
+				<br/>
+				<label class="control-label col-sm-2">Address:</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" id="address" name="Address" placeholder="Enter your address"></textarea>
+					<span class="text-danger" id="address-error"></span>
+				</div>
+				<br/>
+				<br/>
+				<div class="overflow-auto">
+			    	<button class="btn btn-default btn-secondary" type="button" onclick="Prev()">Previous</button>
+			    	<div class="float-right">
+			    		<button class="btn btn-default btn-primary" type="button" onclick="current_next()">Next</button>
+			    	</div>
+  			 	</div>
+  			</div>
+			<div class="form-group col" id="tab4">
+         	<label class="control-label col-xs-12 col-sm-6" id="education">Educational Qualification: </label>
+         	</br>
+         	<div class="row">
+         		 <div class="col-sm-4">
+	         		 <label class="control-label col-sm-2">Class </label>
+		         	 </br>
+			         <select class="form-control" name="Class1" id="class1">
+			         	 <option class="disable" value="">Select</option>
+				         <option class="disable" value ="10"> 10<sup>th</sup></option>
+				         <option class="disable" value ="12"> 12<sup>th</sup></option>
+				         <option class="disable" value ="graduation">Graduation</option>
+				     </select> </br>
+			         <select class="form-control" name="Class2" id="class2">
+			         	 <option class="disable" value="">Select</option>
+				         <option class="disable" value ="10"> 10<sup>th</sup></option>
+				         <option class="disable" value ="12"> 12<sup>th</sup></option>
+				         <option class="disable" value ="graduation">Graduation</option>
+			         </select> </br>
+			         <select class="form-control" name="Class3" id="class3">
+			         	 <option class="disable" value="">Select</option>
+				         <option class="disable" value ="10"> 10<sup>th</sup></option>
+				         <option class="disable" value ="12"> 12<sup>th</sup></option>
+				         <option class="disable" value ="graduation">Graduation</option>
+			         </select>
+		     	 </div>
+		         <div class="col-sm-4">
+			         <label class="control-label col-sm-2">Percentage</label>
+			     	 </br>
+			         <select class="form-control" name="Percentage1" id="percent1">
+			         	<option value="">Select</option>
+			         	<option value="above-90">Above 90%</option>
+			         	<option value="above-80">Above 80%</option>
+			         	<option value="above-70">Above 70%</option>
+			         	<option value="above-60">Above 60%</option>
+			         </select>
+			         </br>
+			         <select class="form-control" name="Percentage2" id="percent2">
+			         	<option value="">Select</option>
+			         	<option value="above-90">Above 90%</option>
+			         	<option value="above-80">Above 80%</option>
+			         	<option value="above-70">Above 70%</option>
+			         	<option value="above-60">Above 60%</option>
+			         </select>
+			         <br/>
+			         <select class="form-control" name="Percentage3" id="percent3">
+			         	<option value="">Select</option>
+			         	<option value="above-90">Above 90%</option>
+			         	<option value="above-80">Above 80%</option>
+			         	<option value="above-70">Above 70%</option>
+			         	<option value="above-60">Above 60%</option>
+			         </select>
+		         </div>
+		     	 <br/>
+		         <div class="col-sm-4">
+			         <label class="control-label col-sm-2"> Year </label>
+			     	 <br/>
+			         <select class="form-control" name="Year1" id="yr1">
+			         	 <option class="disable" value="">Select</option>
+				         <option class="disable" value ="2015">2015</option>
+				         <option class="disable" value ="2017">2017</option>
+				         <option class="disable" value ="2020">2020</option>
+			         </select>
+			         </br>
+			         <select class="form-control" name="Year2" id="yr2">
+			             <option class="disable" value="">Select</option>
+				         <option class="disable" value ="2015">2015</option>
+				         <option class="disable" value ="2017">2017</option>
+				         <option class="disable" value ="2020">2020</option>
+			         </select>
+			         </br>
+			         <select class="form-control" name="Year3" id="yr3">
+			         	 <option class="disable" value="">Select</option>
+				         <option class="disable" value ="2015">2015</option>
+				         <option class="disable" value ="2017">2017</option>
+				         <option class="disable" value ="2020">2020</option>
+			         </select>
+	         	 </div>
+	         	 <span class="text-danger" id="edu-error"></span>
+	         </div>
+	         <br/>
+	         <br/>
+	         <div class="overflow-auto">
+			    <button class="btn btn-default btn-secondary" type="button" onclick="Prev()">Previous</button>
+			    <div class="float-right">
+			    	<button class="btn btn-default btn-info" onclick="current_next()" type="button">Submit</button>
+			    </div>
+  			 </div>
+	     	 </div>
+	         <br/>
+	         
+	         <br/>
+			 <div class="bg-light text-dark" id="table">
+				
+			 </div>
+			 <br/>
+			 <br/>
+	        </div>
+		</form>
+	</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="registration.js"></script>
+</body>
+</html>

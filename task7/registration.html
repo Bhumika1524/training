@@ -1,0 +1,209 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+</head>
+<body>
+	<div class="container">
+		<div>
+			<marquee>
+				<h1>Registration Form</h1>
+			</marquee>
+		</div>
+		<form id="form1" name="form1">
+			<div style="text-align:center;margin-top:40px;">
+				<ul>
+					<li class="step" onclick="step1()" id="step1">1</li>
+			    	<li class="step" onclick="step2()" id="step2">2</li>
+			    	<li class="step" onclick="step3()" id="step3">3</li>
+			    	<li class="step" onclick="step4()" id="step4">4</li>
+			    </ul>
+  			 </div>
+  			 <br/>
+			<div id="tab1" role="tabpanel" class="tab">
+				<label>Name:</label>
+				<input id="name" name="name" type="text" class="input-size" placeholder="Enter your Name">
+				<span id="name-error"></span>
+			<br/>
+			<br/>
+				<label>Contact Number:</label>
+				<input type="text" name="contact" class="input-size" id="number" placeholder="Enter your Contact Number">
+				<span id="contact-error"></span>
+			<br/>
+			<br/>
+				<label>Email:</label>
+				<input id="email" type="text" class="input-size" name="email" placeholder="Enter your Email">
+				<span id="email-error"></span>
+				<br/>
+				<br/>
+				<div style="overflow:auto;">
+			    <div style="float:right;">
+			    	<button type="button" id="next1" onclick="current_next()">Next</button>
+			    </div>
+				</div>
+			</div>
+			<br/>
+			<br/>
+			<div id="tab2" role="tabpanel" class="tab">
+				<label>City:</label>
+				<select name="city" id="city">
+					<option class="input-size" value="">Select your City</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Mohali">Mohali</option>
+					<option value="ZirakPur">Zirakpur</option>
+				</select>
+				<span id="city-error"></span>
+			</br>
+			<br/>
+			<div id="hobby">
+				<label>Hobby:</label>
+					<label>
+					<input class="hobby input-size" name="dancing" value="Dancing" id="check-box" type="checkbox" >Dancing</label>
+				<label>
+					<input class="hobby input-size" name="singing" value="Singing" id="check-box2" type="checkbox">Singing
+				</label>
+				<label>
+					<input class="hobby input-size" name="playing" value="Playing" id="check-box3" type="checkbox">Playing
+				</label>
+				<span id="hobby-error"></span>
+			</div>
+			</br>
+			<br/>
+				<label>Date of Birth:</label>
+				<input class="input-size" type="date" name="DOB" id="Dob">
+				<span id="dob-error"></span>
+				<br/>
+				<br/>
+				<div style="overflow:auto;">
+			    	<button type="button" id="prevBtn" onclick="Prev()">Previous</button>
+			    	<div style="float:right;">
+			    	<button type="button" id="nextBtn" onclick="current_next()">Next</button>
+			    </div></div>
+			</div>
+			</br>
+			<div id="tab3" role="tabpanel" class="tab">
+				<label>Gender:</label>
+				<label>
+				<input id="radio-btn" class="gender input-size" value="Male" name="gender" type="radio">Male</label>
+				<label>
+				<input id="radio-btn" value="Female" class="gender input-size" name="gender" type="radio">Female</label>
+				<span id="gendererror"></span>
+			</br>
+				<label>Address:</label>
+				<textarea class="input-size" id="address" name="Address" placeholder="Enter your address"></textarea>
+				<span id="address-error"></span>
+				<br/>
+				<br/>
+				<div style="overflow:auto;">
+			    <button type="button" id="prev1" onclick="Prev()">Previous</button>
+			    <div style="float:right;">
+			    	<button type="button" id="next" onclick="current_next()">Next</button>
+			    </div>
+  			 </div>
+			</div>
+			</br>
+			<br/>
+			<div id="tab4" role="tabpanel" class="tab">
+         	<label id="education">Educational Qualification: </label>
+         </br>
+         	<div class="grid">
+         	<div class="class">
+         	<label>Class </label>
+         	 </br>
+	         <select name="class1" id="class1">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="10"> 10<sup>th</sup></option>
+		         <option class="disable" value ="12"> 12<sup>th</sup></option>
+		         <option class="disable" value ="graduation">Graduation</option>
+		         </select> </br>
+	         <select name="class2" id="class2">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="10"> 10<sup>th</sup></option>
+		         <option class="disable" value ="12"> 12<sup>th</sup></option>
+		         <option class="disable" value ="graduation">Graduation</option>
+	         </select> </br>
+	         <select name="class3" id="class3">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="10"> 10<sup>th</sup></option>
+		         <option class="disable" value ="12"> 12<sup>th</sup></option>
+		         <option class="disable" value ="graduation">Graduation</option>
+	         </select>
+	         </div>
+	         <div class="percentage">
+	         <label>Percentage</label>
+	     	 </br>
+	         <select name="percentage1" id="percent1">
+	         	<option value="">Select</option>
+	         	<option value="above-90">Above 90%</option>
+	         	<option value="above-80">Above 80%</option>
+	         	<option value="above-70">Above 70%</option>
+	         	<option value="above-60">Above 60%</option>
+	         </select>
+	         </br>
+	         <select name="percentage2" id="percent2">
+	         	<option value="">Select</option>
+	         	<option value="above-90">Above 90%</option>
+	         	<option value="above-80">Above 80%</option>
+	         	<option value="above-70">Above 70%</option>
+	         	<option value="above-60">Above 60%</option>
+	         </select>
+	         <br/>
+	         <select name="percentage3" id="percent3">
+	         	<option value="">Select</option>
+	         	<option value="above-90">Above 90%</option>
+	         	<option value="above-80">Above 80%</option>
+	         	<option value="above-70">Above 70%</option>
+	         	<option value="above-60">Above 60%</option>
+	         </select>
+	         </div>
+	     </br>
+	         <div class="year">
+	         <label> Year </label>
+	     </br>
+	         <select name="year1" id="yr1">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="2015">2015</option>
+		         <option class="disable" value ="2017">2017</option>
+		         <option class="disable" value ="2020">2020</option>
+	         </select>
+	         </br>
+	         <select name="year2" id="yr2">
+	             <option class="disable" value="">Select</option>
+		         <option class="disable" value ="2015">2015</option>
+		         <option class="disable" value ="2017">2017</option>
+		         <option class="disable" value ="2020">2020</option>
+	         </select>
+	         </br>
+	         <select name="year3" id="yr3">
+	         	 <option class="disable" value="">Select</option>
+		         <option class="disable" value ="2015">2015</option>
+		         <option class="disable" value ="2017">2017</option>
+		         <option class="disable" value ="2020">2020</option>
+	         </select>
+	         </div>
+	         <span id="edu-error"></span>
+	         </div>
+	         <div style="overflow:auto;">
+			    <button type="button" id="prev3" onclick="Prev()">Previous</button>
+			    <div style="float:right;">
+			    	<button onclick="current_next()" type="button" id="submit">Submit</button>
+			    </div>
+  			 </div>
+	     	 </div>
+	         <br/>
+	         <br/>
+		</form>
+	</div>
+	<br/>
+	<div id="table">
+		
+	</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="registration.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+	<div class="container bg-dark text-white">
+			<marquee>
+				<h1 class="text-white">Registration Form</h1>
+			</marquee>
+		<form name="form1"  onsubmit="ValidateForm();return false">
+			<div class="form-group">
+				<label class="control-label col-sm-2">Name:</label>
+				<div class="col-sm-10">
+					<input id="name" name="name" type="text" class="form-control" placeholder="Enter your Name">
+					<span class="text-danger" id="name-error"></span>
+				</div>
+		    </div>
+			</br>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Contact Number:</label>
+				<div class="col-sm-10">
+					<input type="text" name="contact" class="form-control" id="number" placeholder="Enter your Contact Number">
+					<span class="text-danger" id="contact-error"></span>
+				</div>
+			</div>
+			</br>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Email:</label>
+				<div class="col-sm-10">
+					<input id="email" type="text" class="form-control" name="email" placeholder="Enter your Email">
+					<span id="email-error" class="text-danger"></span>
+				</div>
+			</div>
+			</br>
+			<div class="form-group">
+				<label class="control-label col-sm-2">City:</label>
+				<div class="col-sm-10">
+					<select class="form-control" name="city" id="city">
+						<option value="">Select your City</option>
+						<option value="Chandigarh">Chandigarh</option>
+						<option value="Mohali">Mohali</option>
+						<option value="ZirakPur">Zirakpur</option>
+					</select>
+					<span id="city-error" class="text-danger"></span>
+				</div>
+			</div>
+			</br>
+			<div id="hobby" class="form-group">
+				<label class="control-label col-sm-1">Hobby:</label>
+				<label class="checkbox-inline">
+					<input class="hobby" name="dancing" value="Dancing" type="checkbox">  Dancing
+				</label>
+				<label class="checkbox-inline">
+					<input class="hobby" name="singing" value="Singing" type="checkbox">  Singing
+				</label>
+				<label class="checkbox-inline">
+					<input class="hobby" name="playing" value="Playing" type="checkbox">  Playing
+				</label>
+				<span class="text-danger" id="hobby-error"></span>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Date of Birth:</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="date" name="DOB" id="Dob">
+					<span id="dob-error" class="text-danger"></span>
+				</div>
+			</div>
+			</br>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Gender:</label>
+				<div class="col-sm-10">
+					<label class="radio-inline">
+					<input id="radio-btn" class="gender" value="Male" name="gender" type="radio"> Male</label>
+					<label class="radio-inline">
+					<input id="radio-btn" value="Female" class="gender" name="gender" type="radio"> Female</label>
+					<span id="gendererror" class="text-danger"></span>
+				</div>
+			</div>
+			</br>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Address:</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" id="address" name="Address" placeholder="Enter your address"></textarea>
+					<span id="address-error" class="text-danger"></span>
+				</div>
+			</div>
+			</br>
+			<div class="form-group">
+         		<label class="control-label col-xs-12 col-sm-4" id="education">Educational Qualification: </label>
+         		</br>
+         		<div class="row">
+	         		<div class="col-sm-4">
+	         			<label class="control-label col-sm-2">Class </label>
+	         	 		</br>
+		         		<select name="class1" class="form-control" id="class1">
+				         	 <option class="disable" value="">Select</option>
+					         <option class="disable" value ="10"> 10<sup>th</sup></option>
+					         <option class="disable" value ="12"> 12<sup>th</sup></option>
+					         <option class="disable" value ="graduation">Graduation</option>
+			         	</select> </br>
+		         		<select name="class2" class="form-control" id="class2">
+				         	 <option class="disable" value="">Select</option>
+					         <option class="disable" value ="10"> 10<sup>th</sup></option>
+					         <option class="disable" value ="12"> 12<sup>th</sup></option>
+					         <option class="disable" value ="graduation">Graduation</option>
+		         		</select> </br>
+				        <select class="form-control" name="class3" id="class3">
+				         	 <option class="disable" value="">Select</option>
+					         <option class="disable" value ="10"> 10<sup>th</sup></option>
+					         <option class="disable" value ="12"> 12<sup>th</sup></option>
+					         <option class="disable" value ="graduation">Graduation</option>
+				        </select>
+		         	</div>
+	         		<div class="col-sm-4">
+	         			 <label class="control-label col-sm-2">Percentage</label>
+				     	 </br>
+				         <select class="form-control" name="percentage1" id="percent1">
+				         	<option value="">Select</option>
+				         	<option value="above-90">Above 90%</option>
+				         	<option value="above-80">Above 80%</option>
+				         	<option value="above-70">Above 70%</option>
+				         	<option value="above-60">Above 60%</option>
+				         </select>
+				         </br>
+				         <select class="form-control" name="percentage2" id="percent2">
+				         	<option value="">Select</option>
+				         	<option value="above-90">Above 90%</option>
+				         	<option value="above-80">Above 80%</option>
+				         	<option value="above-70">Above 70%</option>
+				         	<option value="above-60">Above 60%</option>
+				         </select>
+				         <br/>
+				         <select class="form-control" name="percentage3" id="percent3">
+				         	<option value="">Select</option>
+				         	<option value="above-90">Above 90%</option>
+				         	<option value="above-80">Above 80%</option>
+				         	<option value="above-70">Above 70%</option>
+				         	<option value="above-60">Above 60%</option>
+				         </select>
+				    </div>
+	     			<br/>
+	        		<div class="col-sm-4">
+	         			 <label class="control-label col-sm-2"> Year </label>
+	     				 </br>
+				         <select class="form-control" name="year1" id="yr1">
+				         	 <option class="disable" value="">Select</option>
+					         <option class="disable" value ="2015">2015</option>
+					         <option class="disable" value ="2017">2017</option>
+					         <option class="disable" value ="2020">2020</option>
+				         </select>
+				         </br>
+				         <select class="form-control" name="year2" id="yr2">
+				             <option class="disable" value="">Select</option>
+					         <option class="disable" value ="2015">2015</option>
+					         <option class="disable" value ="2017">2017</option>
+					         <option class="disable" value ="2020">2020</option>
+				         </select>
+				         </br>
+				         <select class="form-control" name="year3" id="yr3">
+				         	 <option class="disable" value="">Select</option>
+					         <option class="disable" value ="2015">2015</option>
+					         <option class="disable" value ="2017">2017</option>
+					         <option class="disable" value ="2020">2020</option>
+				         </select>
+	         		</div>
+	         		<span class="text-danger" id="edu-error"></span>
+	         	</div>
+	         	</br>
+	         	<div id="submit-button" class="col-sm-4">
+					<input class="btn btn-default" type="submit" name="Submit">
+				</div>
+			</div>
+			<br/>
+		</form>
+	</div>
+	<br/>
+	<div class="bg-light" id="table">
+		
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="registration.js"></script>
+</html>

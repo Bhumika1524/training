@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<marquee>
+				<h1>Registration Form</h1>
+			</marquee>
+		</div>
+		<form name="form1"  onsubmit="ValidateForm();return false">
+			<div class="col-25">
+				<label>Name:</label>
+			</div>
+			<div>
+				<input name="name" type="text" class="input-size" placeholder="Enter your Name">
+				<span id="name-error"></span>
+			</div>
+			<div id="contact-number" class="col-25">
+				<label>Contact Number:</label>
+			</div>
+			<div class="col-75">
+				<input type="text" class="input-size" name="number" placeholder="Enter your Contact Number">
+				<span id="contact-error"></span>
+			</div>
+			<div class="col-25">
+				<label>Email:</label>
+			</div>
+			<div class="col-75">
+				<input id="email" type="text" class="input-size" name="email" placeholder="Enter your Email">
+				<span id="email-error"></span>
+			</div>
+			<div id="city" class="col-25">
+				<label>City:</label>
+			</div>
+			<div class="col-75">
+				<select name="city" class="required">
+					<option value="">Select your City</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Mohali">Mohali</option>
+					<option value="ZirakPur">Zirakpur</option>
+				</select>
+				<span id="city-error"></span>
+			</div>
+			<div id="hobby" class="col-25">
+				<label>Hobby:</label>
+			</div>
+			<div class="col-75">
+				<label>
+					<input name="hobby" value="Dancing" id="check-box" type="checkbox" >Dancing</label>
+				<label>
+					<input name="hobby" value="Singing" id="check-box2" type="checkbox">Singing
+				</label>
+				<label>
+					<input name="hobby" value="Playing" id="check-box3" type="checkbox">Playing
+				</label>
+				<span id="hobby-error"></span>
+			</div>
+			<div id="dob" class="col-25">
+				<label>Date of Birth:</label>
+			</div>
+			<div class="col-75">
+				<input type="date" name="Dob">
+				<span id="dob-error"></span>
+			</div>
+			<div id="gender" class="col-25">
+				<label>Gender:</label>
+			</div>
+			<div class="col-75"><label>
+				<input id="radio-btn" value="Male" type="radio" name="gender">Male</label>
+				<label>
+				<input id="radio-btn" value="Female" type="radio" name="gender">Female</label>
+				<span id="gender-error"></span>
+			</div>
+			<div id="address" class="col-25">
+				<label>Address:</label>
+			</div>
+			<div class="col-75">
+				<textarea name="address" placeholder="Enter your address"></textarea>
+				<span id="address-error"></span>
+			</div>
+			<div id="submit-button" class="col-25">
+				<input type="submit" name="Submit">
+			</div>
+		</form>
+	</div>
+	<div id="table">
+		
+	</div>
+</body>
+<script type="text/javascript" src="registration.js"></script>
+</html>

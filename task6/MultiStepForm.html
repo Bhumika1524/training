@@ -1,0 +1,48 @@
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="MultiStepForm.css">
+</head>
+<body>
+<form id="regForm" >
+  <h1>Register:</h1>
+  <div class="tab">Name:
+   <p><input class="input1" class="firstname" placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+   <p><input class="input1" placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+  </div>
+  <div class="tab">Contact Info:
+    <p><input class="input2" id="mail" placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <p><input class="input2" id="number" placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+  </div>
+  <div class="tab">Birthday:
+    <p><input class="input3" id="date" placeholder="dd" oninput="this.className = ''" name="dd"></p>
+    <p><input class="input3" id="month" placeholder="mm" oninput="this.className = ''" name="nn"></p>
+    <p><input class="input3" id="year" placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+  </div>
+  <div class="tab">Login Info:
+    <p><input class="input4" id="username" placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+    <p><input class="input4" id="password" placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+  </div>
+  <div style="overflow:auto;">
+    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+    <div style="float:right;">
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <button type="submit" id="submit">Submit</button>
+    </div>
+  </div>
+  
+
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+  <br/>
+  <br/>
+  <div id="data">
+  </div>
+</form>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="MultistepForm.js"></script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<marquee>
+				<h1>Registration Form</h1>
+			</marquee>
+		</div>
+		<form name="form1" onsubmit="return ValidateForm();">
+			<div class="col-25">
+				<label>Name:</label>
+			</div>
+			<div>
+				<input name="name" type="text" class="input-size" placeholder="Enter your Name">
+			</div>
+			<div id="contact-number" class="col-25">
+				<label>Contact Number:</label>
+			</div>
+			<div class="col-75">
+				<input type="text" class="input-size" name="number" placeholder="Enter your Contact Number">
+			</div>
+			<div class="col-25">
+				<label>Email:</label>
+			</div>
+			<div class="col-75">
+				<input id="email" type="text" class="input-size" name="email" placeholder="Enter your Email">
+			</div>
+			<div id="city" class="col-25">
+				<label>City:</label>
+			</div>
+			<div class="col-75">
+				<select name="city" class="required">
+					<option value="">Select your City</option>
+					<option value="ch">Chandigarh</option>
+					<option value="mh">Mohali</option>
+					<option value="zh">Zirakpur</option>
+				</select>
+			</div>
+			<div id="hobby" class="col-25">
+				<label>Hobby:</label>
+			</div>
+			<div class="col-75">
+				<label>
+					<input value="hobby" id="check-box" type="checkbox" name="hobby">Dancing</label>
+				<label>
+					<input value="hobby" id="check-box2" type="checkbox" name="hobby">Singing
+				</label>
+				<label>
+					<input value="hobby" id="check-box3" type="checkbox" name="hobby">Playing
+				</label>
+			</div>
+			<div id="dob" class="col-25">
+				<label>Date of Birth:</label>
+			</div>
+			<div class="col-75">
+				<input type="date" name="Dob">
+			</div>
+			<div id="gender" class="col-25">
+				<label>Gender:</label>
+			</div>
+			<div class="col-75"><label>
+				<input id="radio-btn" type="radio" name="gender">Male</label>
+				<label>
+				<input id="radio-btn" type="radio" name="gender">Female</label>
+			</div>
+			<div id="address" class="col-25">
+				<label>Address:</label>
+			</div>
+			<div class="col-75">
+				<textarea name="address" placeholder="Enter your address"></textarea>
+			</div>
+			<div id="submit-button" class="col-25">
+				<input type="submit" name="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="registration.js"></script>
+</html>
